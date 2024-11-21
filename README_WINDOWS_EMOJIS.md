@@ -13,7 +13,7 @@ NOTE: THIS IS THE SAME AS THE README.md BUT WITH WINDOWS EMOJIS!
 
 * [Executable Examination Example](#-executable-examination-example)
   * [Table of Contents](#table-of-contents)
-  * [Quick Task List](#-quick-task-list)
+  * [✨ Quick Task List](#-quick-task-list)
   * [Introduction](#-introduction)
   * [Note: Student Name](#-note-student-name)
   * [Honor Code](#-honor-code)

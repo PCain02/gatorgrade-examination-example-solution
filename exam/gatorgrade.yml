@@ -28,22 +28,44 @@ setup: |
         count: 10
         exact: true
 
-- ../README_PART_TWO.md:
-    - description: Ensure that the README_PART_TWO.md file exists inside of the root of the GitHub repository
+- ../README_NO_EMOJIS.md:
+    - description: Ensure that the README_NO_EMOJIS.md file exists inside of the root of the GitHub repository
       check: ConfirmFileExists
-    - description: Delete the phrase 'Add Your Name Here' and add your own name as an Honor Code pledge in README_PART_TWO.md
+    - description: Delete the phrase 'Add Your Name Here' and add your own name as an Honor Code pledge in README_NO_EMOJIS.md
       check: MatchFileFragment
       options:
         fragment: "Add Your Name Here"
         count: 0
         exact: true
-    - description: Retype the every word in the Honor Code pledge in README_PART_TWO.md
+    - description: Retype the every word in the Honor Code pledge in README_NO_EMOJIS.md
       check: MatchFileFragment
       options:
         fragment: "I adhered to the Allegheny College Honor Code while completing this examination."
         count: 3
         exact: true
-    - description: Indicate that you have completed all of the tasks in the README_PART_TWO.md
+    - description: Indicate that you have completed all of the tasks in the README_NO_EMOJIS.md
+      check: MatchFileFragment
+      options:
+        fragment: "- [X]"
+        count: 10
+        exact: true
+
+- ../README_WINDOWS_EMOJIS.md:
+    - description: Ensure that the README_WINDOWS_EMOJIS.md file exists inside of the root of the GitHub repository
+      check: ConfirmFileExists
+    - description: Delete the phrase 'Add Your Name Here' and add your own name as an Honor Code pledge in README_WINDOWS_EMOJIS.md
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Retype the every word in the Honor Code pledge in README_WINDOWS_EMOJIS.md
+      check: MatchFileFragment
+      options:
+        fragment: "I adhered to the Allegheny College Honor Code while completing this examination."
+        count: 3
+        exact: true
+    - description: Indicate that you have completed all of the tasks in the README_WINDOWS_EMOJIS.md
       check: MatchFileFragment
       options:
         fragment: "- [X]"

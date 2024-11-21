@@ -1,6 +1,6 @@
-# Gatorgrade Examination Example: Solution
+# 🚀 Gatorgrade Examination Example: Solution
 
-NOTE: THIS IS THE SAME AS THE OTHER README BUT WITHOUT EMOJIS!
+NOTE: THIS IS THE SAME AS THE README.md BUT WITH WINDOWS EMOJIS!
 
 ![Platforms: Linux, MacOS, Windows](https://img.shields.io/badge/Platform-Linux%20%7C%20MacOS%20%7C%20Windows-blue.svg)
 [![Language: Python](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
@@ -11,11 +11,11 @@ NOTE: THIS IS THE SAME AS THE OTHER README BUT WITHOUT EMOJIS!
 
 <!---toc start-->
 
-* [Executable Examination Example](#-executable-examination-example)
+* [🚀 Executable Examination Example](#-executable-examination-example)
   * [Table of Contents](#table-of-contents)
-  * [Quick Task List](#-quick-task-list)
+  * [✨ Quick Task List](#-quick-task-list)
   * [Introduction](#-introduction)
-  * [Note: Student Name](#-note-student-name)
+  * [😁 Note: Student Name](#-note-student-name)
   * [Honor Code](#-honor-code)
   * [Re-type the sentence "I adhered to the Allegheny College Honor Code while completing this examination."](#-re-type-the-sentence-i-adhered-to-the-allegheny-college-honor-code-while-completing-this-examination)
   * [Examination Overview](#-examination-overview)
@@ -24,7 +24,7 @@ NOTE: THIS IS THE SAME AS THE OTHER README BUT WITHOUT EMOJIS!
 
 <!---toc end-->
 
-## Quick Task List
+## ✨ Quick Task List
 
 - [X] Read the `Introduction` section for a brief overview
 - [X] Read the `Honor Code` section and then digitally sign your pledge

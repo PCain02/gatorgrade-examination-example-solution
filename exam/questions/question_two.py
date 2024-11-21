@@ -3,7 +3,7 @@
 # Note: The imports in the following source code block adhere to the
 # industry best practices for Python source code.
 
-from typing import List, Union, Tuple
+from typing import Dict, List, Tuple, Union
 
 # Introduction: Read This First! {{{
 
@@ -28,7 +28,7 @@ from typing import List, Union, Tuple
 # Note: If the function is called with an empty list, it should return an empty dictionary.
 
 
-def count_elements(numbers: List[int]) -> dict[int, int]:
+def count_elements(numbers: List[int]) -> Dict[int, int]:
     """Count the occurrences of each element in the list."""
     counts = {}
     for number in numbers:

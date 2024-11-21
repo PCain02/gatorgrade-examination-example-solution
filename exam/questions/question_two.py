@@ -30,7 +30,7 @@ from typing import Dict, List, Tuple, Union
 
 def count_elements(numbers: List[int]) -> Dict[int, int]:
     """Count the occurrences of each element in the list."""
-    counts = {}
+    counts: Dict[int, int] = {}
     for number in numbers:
         counts[number] = counts.get(number, 0) + 1
     return counts
@@ -49,10 +49,10 @@ def count_elements(numbers: List[int]) -> Dict[int, int]:
 # Note: If no pairs exist, the function should return an empty list.
 
 
-def find_pairs_with_sum(numbers: List[int], target_sum: int) -> List[Tuple[int, int]]:
+def find_pairs_with_sum(numbers: List[int], target_sum: int) -> List[Tuple[int, ...]]:
     """Find unique pairs of numbers that add up to a target sum."""
-    seen = set()
-    pairs = set()
+    seen: set[int] = set()
+    pairs: set[Tuple[int, ...]] = set()
     for number in numbers:
         complement = target_sum - number
         if complement in seen:
@@ -77,7 +77,10 @@ def matrix_transpose(matrix: List[List[int]]) -> Union[List[List[int]], None]:
     """Transpose the given matrix."""
     if not matrix or any(len(row) != len(matrix[0]) for row in matrix):
         return None
-    return [[matrix[row][col] for row in range(len(matrix))] for col in range(len(matrix[0]))]
+    return [
+        [matrix[row][col] for row in range(len(matrix))]
+        for col in range(len(matrix[0]))
+    ]
 
 
 # }}}

@@ -20,7 +20,12 @@ def test_count_elements():
     # check 2: List with unique elements
     numbers = [1, 2, 3, 4]
     counts = count_elements(numbers)
-    assert counts == {1: 1, 2: 1, 3: 1, 4: 1}, "Count elements in list with unique values"
+    assert counts == {
+        1: 1,
+        2: 1,
+        3: 1,
+        4: 1,
+    }, "Count elements in list with unique values"
     # check 3: Empty list
     numbers = []
     counts = count_elements(numbers)

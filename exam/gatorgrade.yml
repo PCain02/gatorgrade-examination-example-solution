@@ -60,6 +60,28 @@ setup: |
     - description: Ensure that test_question_one.py file exists in the tests/ directory
       check: ConfirmFileExists
 
+# Question 2
+
+- questions/question_two.py:
+  - description: Ensure that question_two.py file exists in the questions/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for question_two.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in question_two.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 4
+      exact: true
+
+- tests/test_question_two.py:
+    - description: Ensure that test_question_two.py file exists in the tests/ directory
+      check: ConfirmFileExists
+
 # }}}
 
 # Program Output {{{
@@ -102,6 +124,45 @@ setup: |
         - CS: "D"
           rationale: "Search a matrix and compute summary values based on matrix"
 
+# Question 2
+
+- description: Run checks for Question 2 Part (a) with 'execexam' command and confirm correct exit code
+  command: poetry run execexam . tests/ --mark "question_two_part_a" --no-fancy
+  objectives:
+    LO1:
+      degree:
+        - CS: "I"
+          rationale: "Manipulate the matrix data structure"
+    LO5:
+      degree:
+        - CS: "D"
+          rationale: "Search a matrix and compute summary values based on matrix"
+
+- description: Run checks for Question 2 Part (b) with 'execexam' command and confirm correct exit code
+  command: poetry run execexam . tests/ --mark "question_two_part_b" --no-fancy
+  objectives:
+    LO1:
+      degree:
+        - CS: "I"
+          rationale: "Manipulate the matrix data structure"
+    LO5:
+      degree:
+        - CS: "D"
+          rationale: "Search a matrix and compute summary values based on matrix"
+
+- description: Run checks for Question 2 Part (c) with 'execexam' command and confirm correct exit code
+  command: poetry run execexam . tests/ --mark "question_two_part_c" --no-fancy
+  objectives:
+    LO1:
+      degree:
+        - CS: "I"
+          rationale: "Manipulate the matrix data structure"
+    LO5:
+      degree:
+        - CS: "D"
+          rationale: "Search a matrix and compute summary values based on matrix"
+
+
 # }}}
 
 # Program Analysis with Software Engineering Tools {{{
@@ -143,6 +204,48 @@ setup: |
   check: MatchCommandFragment
   options:
     command: "poetry run symbex -s --undocumented -f questions/question_one.py --count"
+    fragment: 0
+    count: 1
+    exact: true
+
+
+# Question 2
+
+# run a command: ruff check with default settings found in .ruff.toml file
+- description: Ensure that Question 2 follows industry-standard rules using the command 'ruff check'
+  command: poetry run ruff check questions/question_two.py
+
+# run a command: ruff format with default settings found in .ruff.toml file
+- description: Ensure that Question 2 adheres to an industry-standard format using the command 'ruff format'
+  command: poetry run ruff format questions/question_two.py --check
+
+# run a command: mypy with the default settings to confirm type alignment for all functions
+- description: Ensure that Question 2 has correct type annotations using the command 'mypy'
+  command: poetry run mypy questions/question_two.py
+
+# run symbex: count functions with full type annotations
+- description: Ensure that Question 2 has correct number of fully type annotated functions using the command 'symbex'
+  check: MatchCommandFragment
+  options:
+    command: "poetry run symbex -s --fully-typed -f questions/question_two.py --count"
+    fragment: 3
+    count: 1
+    exact: true
+
+# run symbex: count functions with docstring-based documentation (note: does not count module docstring)
+- description: Ensure that Question 2 has correct number of documented functions using the command 'symbex'
+  check: MatchCommandFragment
+  options:
+    command: "poetry run symbex -s --documented -f questions/question_two.py --count"
+    fragment: 3
+    count: 1
+    exact: true
+
+# run symbex: confirm that there are no functions that are undocumented (i.e., do not have a docstring)
+- description: Ensure that Question 2 has no undocumented functions using the command 'symbex'
+  check: MatchCommandFragment
+  options:
+    command: "poetry run symbex -s --undocumented -f questions/question_two.py --count"
     fragment: 0
     count: 1
     exact: true

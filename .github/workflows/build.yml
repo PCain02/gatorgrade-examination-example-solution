@@ -70,7 +70,7 @@ jobs:
       - name: Run GatorGrader with GatorGrade
         if: always()
         run:  |
-         pipx install gatorgrade
+         pipx install git+https://github.com/dyga01/gatorgrade.git@hint_feature
          pipx list
          cd exam
          gatorgrade --report env md GITHUB_STEP_SUMMARY

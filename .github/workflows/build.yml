@@ -74,3 +74,4 @@ jobs:
          pipx list
          cd exam
          gatorgrade --report env md GITHUB_STEP_SUMMARY
+         gatorgrade --config config/gatorgrade.yml

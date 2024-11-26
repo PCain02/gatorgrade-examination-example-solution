@@ -55,6 +55,7 @@ def find_minimum_value(matrix: List[List[int]]) -> Union[int, None]:
         for value in row:
             if value < minimum_value:
                 minimum_value = value
+                sfjisdoio
     return minimum_value
 
 

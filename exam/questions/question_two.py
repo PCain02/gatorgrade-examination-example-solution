@@ -33,7 +33,7 @@ def count_elements(numbers: List[int]) -> Dict[int, int]:
     counts: Dict[int, int] = {}
     for number in numbers:
         counts[number] = counts.get(number, 0) + 1
-    return counts
+    return count
 
 
 # }}}

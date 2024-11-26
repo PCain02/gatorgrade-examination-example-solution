@@ -1,6 +1,6 @@
 # 🚀 Gatorgrade Examination Example: Solution
 
-NOTE: THIS IS THE SAME AS THE README.md BUT WITH WINDOWS EMOJIS!
+NOTE: THIS IS THE SAME AS THE README.md BUT WITH WINDOWS EMOJIS! Found on [emojipedia](https://emojipedia.org/microsoft).
 
 ![Platforms: Linux, MacOS, Windows](https://img.shields.io/badge/Platform-Linux%20%7C%20MacOS%20%7C%20Windows-blue.svg)
 [![Language: Python](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
